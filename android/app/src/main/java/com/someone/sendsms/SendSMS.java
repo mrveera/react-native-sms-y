@@ -48,10 +48,10 @@ public class SendSMS extends ReactContextBaseJavaModule {
             String DELIVERED = "SMS_DELIVERED";
 
             PendingIntent sentPI = PendingIntent.getBroadcast(reactContext, 0,
-                    new Intent(SENT), 0);
+                    new Intent(SENT), PendingIntent.FLAG_MUTABLE);
 
             PendingIntent deliveredPI = PendingIntent.getBroadcast(reactContext, 0,
-                    new Intent(DELIVERED), 0);
+                    new Intent(DELIVERED), PendingIntent.FLAG_MUTABLE);
 
             //---when the SMS has been sent---
             reactContext.registerReceiver(new BroadcastReceiver(){

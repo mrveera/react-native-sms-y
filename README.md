@@ -1,4 +1,4 @@
-## react-native-sms-x
+## react-native-sms-y
 ***
 **SendSMS**
 
@@ -6,7 +6,7 @@
 
 *usage*
 ```js
-import SendSMS from 'react-native-sms-x';
+import SendSMS from 'react-native-sms-y';
 // you can put any number as Id to identify which message being process
 SendSMS.send(123, "+959254687254", "Hey.., this is me!\nGood to see you. Have a nice day.", (msg)=>{ alert(msg) });
 ```
@@ -25,7 +25,7 @@ Response msg string will be one of the following:
 ---
 #### Installation
 ```
-npm install react-native-sms-x --save
+npm install react-native-sms-y --save
 ```
 ---
 ##### **Android Setup**
@@ -33,17 +33,17 @@ npm install react-native-sms-x --save
 1.In your `android/settings.gradle` file, make the following additions:
 
 ```
-include ':react-native-sms-x'
-project(':react-native-sms-x').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sms-x/android/app')
+include ':react-native-sms-y'
+project(':react-native-sms-y').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sms-y/android/app')
 ```
 
-2.In your `android/app/build.gradle` file, add the ':react-native-sms-x' project as a compile-time dependency:
+2.In your `android/app/build.gradle` file, add the ':react-native-sms-y' project as a compile-time dependency:
 
 ```
 ...
 dependencies {
     ...
-    compile project(':react-native-sms-x')
+    implementation project(':react-native-sms-y')
 }
 ```
 
@@ -97,7 +97,7 @@ import {
   TouchableOpacity,
   ToastAndroid
 } from 'react-native';
-import SendSMS from 'react-native-sms-x';
+import SendSMS from 'react-native-sms-y';
 
 export default class RNSMS extends Component {
   sendSMSFunction() {
@@ -138,7 +138,3 @@ const styles = StyleSheet.create({
 AppRegistry.registerComponent('RNSMS', () => RNSMS);
 ```
 
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/yeyintkoko/react-native-sms-x/badge.svg?style=beer-square)](https://beerpay.io/yeyintkoko/react-native-sms-x)  [![Beerpay](https://beerpay.io/yeyintkoko/react-native-sms-x/make-wish.svg?style=flat-square)](https://beerpay.io/yeyintkoko/react-native-sms-x?focus=wish)
